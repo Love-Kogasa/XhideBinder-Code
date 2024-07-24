@@ -35,7 +35,7 @@
     };
     readercp = new FileReader();
     readercp.onload = function(event){
-      return navigator.clipboard.writeText(xb.decode(event.target.result), "code.txt").then(function(){
+      return navigator.clipboard.writeText(xb.decode(event.target.result)).then(function(){
         return window.alert("复制成功)");
       }, function(){
         return window.alert("复制失败(");

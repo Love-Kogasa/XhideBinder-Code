@@ -21,9 +21,7 @@ export function frfile( ele, cele, text, dele )
         download xb.decode( event.target.result ), "code.txt"
     readercp = new FileReader!
     readercp.onload = ( event ) ->
-        navigator.clipboard.writeText do
-            xb.decode( event.target.result )
-            "code.txt"
+        navigator.clipboard.writeText xb.decode( event.target.result )
         .then do
             ->
                 window.alert( "复制成功)" )
