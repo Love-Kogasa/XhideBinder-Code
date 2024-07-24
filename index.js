@@ -43,7 +43,7 @@
     };
     readertxt = new FileReader();
     readertxt.onload = function(event){
-      return text.value = event.target.result;
+      return text.value = xb.decode(event.target.result);
     };
     ele.onchange = function(){
       return readertxt.readAsText(this.files[0]);

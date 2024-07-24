@@ -29,7 +29,7 @@ export function frfile( ele, cele, text, dele )
                 window.alert( "复制失败(" )
     readertxt = new FileReader!
     readertxt.onload = ( event ) ->
-        text.value = event.target.result
+        text.value = xb.decode event.target.result
     ele.onchange = ->
         readertxt.readAsText @files[0]
     cele.onclick = ->
