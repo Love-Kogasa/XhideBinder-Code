@@ -1,0 +1,15 @@
+{
+  "name": "xhidebinder",
+  "version": "1.0.0",
+  "description": "A data code by both 0x00 and 0x20",
+  "main": "xb.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "keywords": [
+    "code",
+    "livescript"
+  ],
+  "author": "LiYingchao (Love-Kogasa)",
+  "license": "MIT"
+}
