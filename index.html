@@ -1,0 +1,48 @@
+<doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>XhideBinder Code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.613, maximum-scale=0.613">
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
+    <script src="./xhidebinder.js"></script>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <header><main>XhideBinder Coder</main>
+      <a href="#"><img height="24px" src="./github.png"/>Github</a>
+      <a href="#">Npm</a> -
+    </header>
+    <br>
+    <t1>编码器 <lt>encoder</lt></t1>
+    <br>
+    <ul>
+      <b>输入要编码的字符 : </b><br>
+      <input type="text" value="helloWorld" id="text">
+      ———————<br>
+      <button id="cp">复制编码(仅限部分设备)</button><br>
+      <button onclick="bytext( text, cp, this )">下载编码后的文件</button>
+    </ul>
+    <br>
+    <t1>文件编码器 <lt>file encoder</lt></t1>
+    <br>
+    <ul>
+      <b>选择要编码的文件 : </b><br>
+      <input type="file" id="fi">
+      ———————<br>
+      <button onclick="byfile( fi, this )">下载编码后的文件</button>
+    </ul>
+    <br>
+    <t1>解码器 <lt>dncoder</lt></t1>
+    <br>
+    <ul>
+      <b>选择要解码的文件 : </b><br>
+      <input type="file" id="fe">
+      ———————<br>
+      <input type="text" value="解码后的文字">
+      <button id="ce">复制字符</button><br>
+      <button onclick="frfile( fe, ce, te, this )">下载解码后的文件</button>
+    </ul>
+  </body>
+</html>
