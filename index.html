@@ -9,7 +9,11 @@
     <script src="./xhidebinder.js"></script>
     <script src="./index.js"></script>
   </head>
-  <body>
+  <body onload="
+    byfile( fi, d1 );
+    bytext( text, cp, d2 );
+    frfile( fe, ce, te, d3 );
+  ">
     <header><main>XhideBinder Coder</main>
       <a href="#"><img height="24px" src="./github.png"/>Github</a>
       <a href="#">Npm</a> -
@@ -22,7 +26,7 @@
       <input type="text" value="helloWorld" id="text">
       ———————<br>
       <button id="cp">复制编码(仅限部分设备)</button><br>
-      <button onclick="bytext( text, cp, this )">下载编码后的文件</button>
+      <button id="d2">下载编码后的文件</button>
     </ul>
     <br>
     <t1>文件编码器 <lt>file encoder</lt></t1>
@@ -31,7 +35,7 @@
       <b>选择要编码的文件 : </b><br>
       <input type="file" id="fi">
       ———————<br>
-      <button onclick="byfile( fi, this )">下载编码后的文件</button>
+      <button id="d1">下载编码后的文件</button>
     </ul>
     <br>
     <t1>解码器 <lt>dncoder</lt></t1>
@@ -40,9 +44,9 @@
       <b>选择要解码的文件 : </b><br>
       <input type="file" id="fe">
       ———————<br>
-      <input type="text" value="解码后的文字">
+      <input type="text" id="te" value="解码后的文字">
       <button id="ce">复制字符</button><br>
-      <button onclick="frfile( fe, ce, te, this )">下载解码后的文件</button>
+      <button id="d3">下载解码后的文件</button>
     </ul>
   </body>
 </html>

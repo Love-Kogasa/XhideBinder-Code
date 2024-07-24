@@ -31,11 +31,11 @@
     var reader, readercp, readertxt;
     reader = new FileReader();
     reader.onload = function(event){
-      return download(xb.decode(enent.target.result), "code.txt");
+      return download(xb.decode(event.target.result), "code.txt");
     };
     readercp = new FileReader();
     readercp.onload = function(event){
-      return navigator.clipboard.writeText(xb.decode(enent.target.result), "code.txt").then(function(){
+      return navigator.clipboard.writeText(xb.decode(event.target.result), "code.txt").then(function(){
         return window.alert("复制成功)");
       }, function(){
         return window.alert("复制失败(");
@@ -43,7 +43,7 @@
     };
     readertxt = new FileReader();
     readertxt.onload = function(event){
-      return text.value = enent.target.result;
+      return text.value = event.target.result;
     };
     ele.onchange = function(){
       return readertxt.readAsText(this.files[0]);

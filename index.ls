@@ -18,11 +18,11 @@ export function byfile( ele, dele )
 export function frfile( ele, cele, text, dele )
     reader = new FileReader!
     reader.onload = ( event ) ->
-        download xb.decode( enent.target.result ), "code.txt"
+        download xb.decode( event.target.result ), "code.txt"
     readercp = new FileReader!
     readercp.onload = ( event ) ->
         navigator.clipboard.writeText do
-            xb.decode( enent.target.result )
+            xb.decode( event.target.result )
             "code.txt"
         .then do
             ->
@@ -31,7 +31,7 @@ export function frfile( ele, cele, text, dele )
                 window.alert( "复制失败(" )
     readertxt = new FileReader!
     readertxt.onload = ( event ) ->
-        text.value = enent.target.result
+        text.value = event.target.result
     ele.onchange = ->
         readertxt.readAsText @files[0]
     cele.onclick = ->
